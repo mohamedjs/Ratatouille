@@ -9,7 +9,7 @@ use App\Http\Controllers\validate;
 use App\Cat;
 use App\Typ;
 use App\Film;
-use App\Film_typ;;
+use App\Film_typ;
 
 class ajax extends Controller
 {
@@ -17,7 +17,8 @@ class ajax extends Controller
     $type=new Typ();
     if($request->input('name')){
     $type->film_type=$request->input('name');
-    $type->save();}
+    $type->save();
+  }
 
     $types=Typ::all();
     $typo=Array('types'=>$types);
